@@ -1,0 +1,7 @@
+.main-content-wrapper {
+  margin-top: 0px; /* Adjust this value based on the height of your fixed navbar */
+}
+
+.fixed-buttons {
+  background-color: aquamarine;
+}

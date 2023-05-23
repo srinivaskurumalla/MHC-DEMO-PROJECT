@@ -1,0 +1,62 @@
+<aside class="sidebar" [ngClass]="{ show: sharedService.sidebarVisible }">
+  <!-- Sidebar content -->
+
+  <div class="side-menu">
+    <ul class="list-group scroll">
+      <li class="list-group-item btn btn-link" (click)="handleLinkClick($event, 'main')" [ngClass]="{ 'active': (sharedService.selectedMenuItem$ | async) === 'main' }">
+        Main Page
+      </li>
+
+      <li class="list-group-item btn btn-link" (click)="handleLinkClick($event, 'claims')" [ngClass]="{ 'active': (sharedService.selectedMenuItem$ | async) === 'claims' }">
+        Claims
+      </li>
+
+      <li
+        class="list-group-item btn btn-link"
+        (click)="handleLinkClick($event, 'members')" [ngClass]="{ 'active': (sharedService.selectedMenuItem$ | async) === 'members' }"
+      >
+        Members
+      </li>
+      <li
+        class="list-group-item btn btn-link"
+        (click)="handleLinkClick($event, 'providers')" [ngClass]="{ 'active': (sharedService.selectedMenuItem$ | async) === 'providers' }"
+        >
+
+        Providers
+      </li>
+      <li
+        class="list-group-item btn btn-link"
+        (click)="handleLinkClick($event, 'claimAdjustments')"  [ngClass]="{ 'active': (sharedService.selectedMenuItem$ | async) === 'claimAdjustments' }"
+      >
+        Claim Adjustments
+      </li>
+      <li
+        class="list-group-item btn btn-link"
+        (click)="handleLinkClick($event, 'encounters')"  [ngClass]="{ 'active': (sharedService.selectedMenuItem$ | async) === 'encounters' }"
+      >
+        Encounters
+      </li>
+
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+      <li  class="list-group-item btn btn-link">ABCD</li>
+
+    </ul>
+  </div>
+</aside>
