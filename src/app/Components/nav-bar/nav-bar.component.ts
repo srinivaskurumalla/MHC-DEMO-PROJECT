@@ -7,6 +7,8 @@ import { SharedService } from 'src/app/services/shared.service';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent {
+  isDropdownOpen: boolean = false;
+  loggedInUser = localStorage.getItem('loggedInUser');
   constructor(private sharedService: SharedService) {}
   //  toggleSidebar() {
   //   if (this.sharedService.sidebarVisible) {
@@ -17,9 +19,11 @@ export class NavBarComponent {
   toggleSidebar() {
     if (!this.sharedService.sidebarVisible) {
       this.sharedService.openSidebar();
-    }
-    else {
+    } else {
       this.sharedService.closeSidebar();
     }
+  }
+  toggleSignInDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
   }
 }

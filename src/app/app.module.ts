@@ -16,6 +16,10 @@ import { ClaimAdjustmentsComponent } from './Components/side-menu-components/cla
 import { EncountersComponent } from './Components/side-menu-components/encounters/encounters.component';
 import { SharedService } from './services/shared.service';
 import { LoginComponent } from './Components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClaimSearchComponent } from './Components/claim-search/claim-search.component';
+import { DatabaseService } from './services/database.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,13 +32,17 @@ import { LoginComponent } from './Components/login/login.component';
     ProvidersComponent,
     ClaimAdjustmentsComponent,
     EncountersComponent,
-    LoginComponent
+    LoginComponent,
+    ClaimSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-  
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
 
   ],
   providers: [SharedService],

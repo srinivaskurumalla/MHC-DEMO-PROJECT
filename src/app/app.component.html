@@ -1,7 +1,9 @@
-<router-outlet></router-outlet>
-<div class="fixed-header">
+<div *ngIf="!sharedService.isLoggedIn">
+  <app-login></app-login>
+</div>
+<div class="fixed-header" *ngIf="sharedService.isLoggedIn">
   <app-nav-bar></app-nav-bar>
-
+<main>
   <div class="main-content-wrapper">
     <div class="container-fluid">
       <div class="row">
@@ -22,7 +24,6 @@
           }"
         >
           <div class="main-content" style="margin-top: 60px">
-
             <div class="row fixed-buttons">
               <span>
                 <i class="fa-solid fa-house m-3"></i>
@@ -30,31 +31,33 @@
                 <i class="fa-solid fa-stethoscope m-3"></i>
                 <i class="fa-solid fa-calendar-days m-3"></i>
                 <i class="fa-solid fa-landmark m-3"></i>
+                <i class="fa-sharp fa-solid fa-arrow-right m-3"></i>
+                <i class="fa-sharp fa-solid fa-arrow-down m-3"></i>
               </span>
             </div>
-               <!-- router-outlet -->
-               <router-outlet></router-outlet>
-            <ng-container *ngIf="selectedMenuItem === 'main'">
+            <!-- router-outlet -->
+            <router-outlet></router-outlet>
+            <!-- <ng-container *ngIf="selectedMenuItem === 'main'">
               <app-main-menu></app-main-menu>
-            </ng-container>
-            <ng-container
+            </ng-container> -->
+            <!-- <ng-container
               *ngIf="
                 selectedMenuItem === 'claims' &&
                 (!sharedService.sidebarVisible || sharedService.sidebarVisible)
               "
             >
-              <!-- Claims Content -->
+              Claims Content
               <app-claims></app-claims>
-            </ng-container>
-            <ng-container
+            </ng-container> -->
+            <!-- <ng-container
               *ngIf="
                 selectedMenuItem === 'members' &&
                 (!sharedService.sidebarVisible || sharedService.sidebarVisible)
               "
             >
-              <!-- Members Content -->
-              <app-members></app-members>
-            </ng-container>
+              Members Content
+              <app-members></app-members> -->
+            <!-- </ng-container>
             <ng-container
               *ngIf="
                 selectedMenuItem === 'providers' &&
@@ -62,27 +65,28 @@
               "
             >
               <app-providers></app-providers>
-            </ng-container>
-            <ng-container
+            </ng-container> -->
+            <!-- <ng-container
               *ngIf="
                 selectedMenuItem === 'claimAdjustments' &&
                 (!sharedService.sidebarVisible || sharedService.sidebarVisible)
               "
             >
               <app-claim-adjustments></app-claim-adjustments>
-            </ng-container>
-            <ng-container
+            </ng-container> -->
+            <!-- <ng-container
               *ngIf="
                 selectedMenuItem === 'encounters' &&
                 (!sharedService.sidebarVisible || sharedService.sidebarVisible)
               "
             >
               <app-encounters></app-encounters>
-            </ng-container>
+            </ng-container> -->
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
+</main>
+</div>

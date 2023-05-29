@@ -10,12 +10,12 @@ export class AppComponent  implements OnInit {
   title = 'MHC-DEMO-PROJECT';
 
     selectedMenuItem!: string;
-
+    //isLoggedIn: boolean = false;
     constructor(public sharedService: SharedService) {}
 
     ngOnInit() {
       this.sharedService.selectedMenuItem$.subscribe(item => {
-        debugger
+        //debugger
         this.selectedMenuItem = item;
       });
     }

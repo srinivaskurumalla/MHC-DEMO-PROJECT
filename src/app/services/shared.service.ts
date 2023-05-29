@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SharedService {
-
   sidebarVisible: boolean = true;
-  constructor() { }
+  isLoggedIn: boolean = false;
+  constructor() {}
 
   private selectedMenuItemSubject = new BehaviorSubject<string>('main'); // Initialize with a default value
   selectedMenuItem$ = this.selectedMenuItemSubject.asObservable();
@@ -16,8 +16,11 @@ export class SharedService {
     this.selectedMenuItemSubject.next(item);
   }
 
-
-//for toggling side bar
+  login() {
+    //debugger
+    this.isLoggedIn = true;
+  }
+  //for toggling side bar
   openSidebar() {
     this.sidebarVisible = true;
   }
