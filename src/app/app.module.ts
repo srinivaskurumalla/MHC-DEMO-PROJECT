@@ -20,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClaimSearchComponent } from './Components/claim-search/claim-search.component';
 import { DatabaseService } from './services/database.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ProviderSearchComponent } from './Components/provider-search/provider-search.component';
+import { MemberSearchComponent } from './Components/member-search/member-search.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { HttpClientModule } from '@angular/common/http';
     ClaimAdjustmentsComponent,
     EncountersComponent,
     LoginComponent,
-    ClaimSearchComponent
+    ClaimSearchComponent,
+    ProviderSearchComponent,
+    MemberSearchComponent
   ],
   imports: [
     BrowserModule,

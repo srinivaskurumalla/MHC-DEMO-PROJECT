@@ -17,4 +17,10 @@ export class DatabaseService {
   getUsers(): Observable<any> {
     return this.http.get(`${this.baseUrl}/users`)
   }
+  getProviders(): Observable<any>{
+    return this.http.get(`${this.baseUrl}/providers`)
+  }
+  getMembers(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/members`)
+  }
 }

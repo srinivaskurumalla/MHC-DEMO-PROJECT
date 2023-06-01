@@ -77,5 +77,44 @@
       "Name" : "chandu",
       "password" : "123"
     }
+  ],
+  "providers" :[
+    {
+      "id":1,
+      "providerId" :123,
+      "lastName" : "ABC",
+      "firstName": "xyz",
+      "type":"A",
+      "lob":"A1B2",
+      "plan":"1A2B",
+      "npiNumber" : 456,
+      "speciality":"AAA",
+      "address_1_2":"AAA_BBB_CCC",
+      "city":"Hyderabad",
+      "zip":54321,
+      "phone":"98765211",
+      "ssn_TaxId":63432
+    }
+  ],
+  "members" : [
+    {
+      "id":1,
+      "memberId" :123,
+      "lastName" : "ABC",
+      "firstName": "xyz",
+      "middleName":"def",
+      "gender":"M",
+      "recipentId":"A1B2",
+      "hicn":"1A2B",
+      "caseNumber" : 456,
+
+      "address_1_2":"AAA_BBB_CCC",
+      "city":"Hyderabad",
+      "zip":54321,
+      "phone":"98765211",
+      "email":"Abc@xyz.com",
+      "dob":"01-01-1999",
+      "ssn_TaxId":63432
+    }
   ]
 }

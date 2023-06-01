@@ -34,7 +34,9 @@ export class ClaimSearchComponent implements OnInit {
         (data) => {
           //console.log(data)
           data.forEach((item: any) => {
+            debugger
             if (
+
               item.checkNumber == this.claimSearchForm.value.checkNumber &&
               item.claimNumber == this.claimSearchForm.value.claimNumber &&
               item.controlNumber == this.claimSearchForm.value.controlNumber

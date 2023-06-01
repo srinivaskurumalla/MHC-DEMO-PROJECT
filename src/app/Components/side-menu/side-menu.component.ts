@@ -18,12 +18,12 @@ export class SideMenuComponent {
     'Multi Claim Number Type Search',
     'Multi Claim Number Load File Search',
   ];
-  memberSubItems = ['-> Member ID', '	-> Name Search', '-> TaxID'];
-  providerSubItems = ['-> ProviderID', '-> NPI', '-> Name Search'];
+  memberSubItems = ['Member ID', 'Name Search', 'TaxID'];
+  providerSubItems = ['ProviderID', 'NPI', 'Name Search'];
   claimAdjustmentsSubItems = [
-    '-> Quick Update (Amounts Only)',
-    ' -> Full Update',
-    '  -> EDI Adjustment',
+    'Quick Update (Amounts Only)',
+    'Full Update',
+    'EDI Adjustment',
   ];
   selectedSubItem: string | null = null;
   subItemsActive = false;

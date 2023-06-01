@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SharedService {
   sidebarVisible: boolean = true;
-  isLoggedIn: boolean = false;
+  isLoggedIn: boolean = true;
   constructor() {}
 
   private selectedMenuItemSubject = new BehaviorSubject<string>('main'); // Initialize with a default value

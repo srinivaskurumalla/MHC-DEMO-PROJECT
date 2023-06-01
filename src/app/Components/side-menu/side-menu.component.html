@@ -79,7 +79,7 @@
             (click)="
               selectSubItem($event, subItem); handleLinkClick($event, subItem)
             "
-            routerLink="{{ subItem }}"
+            [routerLink]="'/member/' + subItem"
           >
             {{ subItem }}
 
@@ -112,7 +112,7 @@
             (click)="
               selectSubItem($event, subItem); handleLinkClick($event, subItem)
             "
-            routerLink="{{ subItem }}"
+            [routerLink]="'/provider/'+subItem"
           >
             {{ subItem }}
 
@@ -173,7 +173,7 @@
         Encounters
       </li>
 
-     
+
 
       <li class="list-group-item btn btn-link">ABCD</li>
       <li class="list-group-item btn btn-link">ABCD</li>
